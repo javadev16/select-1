@@ -107,7 +107,7 @@ loadData();
 function loadData(){
 		$("#itemlist").children().remove();
 	db.transaction(function(transaction){
-		var sql="SELECT * FROM items where quantity>100 ORDER BY id DESC";
+		var sql="SELECT * FROM items WHERE quantity>100 ORDER BY id DESC";
 		transaction.executeSql(sql,undefined,function(transaction,result){
 if(result.rows.length){
 
